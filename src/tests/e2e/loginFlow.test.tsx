@@ -3,14 +3,10 @@
  */
 import 'expect-puppeteer';
 
-beforeEach(async () => {
-  await page.goto('http://localhost:3000/');
-});
-
 describe('super awesome end to end tests', () => {
-  jest.setTimeout(20000);
-
-  test('if it does something', async () => {
-    // ...
+  it('should login', async () => {
+    await page.goto('http://localhost:3000/');
+    const title = await page.title();
+    expect(title).toBe('eco.mio Webtool');
   });
 });

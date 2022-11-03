@@ -34,4 +34,5 @@ export default {
     '^@src(.*)$': '<rootDir>/src$1',
   },
   setupFiles: ['dotenv/config'],
+  transformIgnorePatterns: ['node_modules/(?!@ngrx|(?!deck.gl)|d3-shape|default|arc|"./arc.js"|@mui|@material-ui)'],
 };
